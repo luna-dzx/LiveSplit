@@ -6,17 +6,8 @@ startup
 
 	if (!File.Exists(@"Components\asl-help"))
 	{
-		print("No asl-help detected, downloading to Components folder");
-		vars.DownloadUnityHelperFunc = (Func<int>)(() =>
-		{
-			using (var client = new System.Net.WebClient())
-			{
-				client.DownloadFile("https://github.com/just-ero/asl-help/raw/main/lib/asl-help", @"Components\asl-help");
-			}
-			return 1;
-		});
-		vars.DownloadUnityHelperFunc();
-		print("Downloaded asl-help");
+		print("No asl-help detected");
+		return false;
 	}
 
 	Assembly.Load(File.ReadAllBytes(@"Components\asl-help")).CreateInstance("Unity");
