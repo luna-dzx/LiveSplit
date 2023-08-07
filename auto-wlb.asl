@@ -12,9 +12,8 @@ startup
     vars.Helper.LoadSceneManager = true;
 
     // Start of Settings
-
-    settings.Add("splitResults", true, "Split on every results screen");
-    settings.Add("resetOnDelete", true, "Reset timer when you delete the same file you just played on");
+    // settings.Add("splitResults", true, "Split on every results screen");
+    // settings.Add("resetOnDelete", true, "Reset timer when you delete the same file you just played on");
 
     vars.stopwatch = new Stopwatch();
     vars.cutsceneScenes = new HashSet<int> { 0, 2, 6, 13, 16, 18, 23, 25, 27, 28 };
