@@ -48,7 +48,6 @@ startup
     vars.isCutscene[23] = true;
     vars.isCutscene[25] = true;
     vars.isCutscene[27] = true;
-    vars.isCutscene[28] = true;
 
 
     vars.resetTimer = 0f;
@@ -83,7 +82,7 @@ update
     vars.oldTimer = vars.currentTimer;
 
     if (vars.currentScene == 0 && !vars.mainMenu) {
-        vars.resetTimer += 0.05f;
+        vars.resetTimer += 0.01f;
         if (vars.resetTimer > 1f)
         {
             vars.mainMenu = true;
